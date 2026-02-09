@@ -94,3 +94,29 @@ pi_S, pi_I = ES.optimal_portfolio(Y, k_eps, c, tau)
 - Kraft & Steffensen (2013) — Option-based VaR/ES (European J. Operational Research)
 - Basak & Shapiro (2001) — VaR + ES constraints (Review of Financial Studies)
 - Gabih, Grecksch, Wunderlich (2005) — Expected Loss constraint (Stochastic Analysis and Applications)
+- 
+## Workflow Rules
+
+### Git
+- 기능별 브랜치: `feat/`, `fix/`, `paper/` 접두사 사용
+- 커밋 메시지: 한글 OK, 간결하게
+- 작업 끝나면 반드시 push
+
+### Notes (매 작업 후 업데이트 필수)
+- `notes/decisions.md` — 모델링 결정과 근거 기록
+- `notes/bugs.md` — 버그 발견 시 원인과 해결법 추가
+- `notes/todo.md` — 완료 항목 체크, 새 항목 추가
+
+### Common Mistakes (실수 발생 시 여기 추가)
+- R=0.02(real), r=0.04(nominal) 절대 바꾸지 말 것
+- (새 실수 발견 시 Claude가 여기에 자동 추가)
+
+### Testing
+- 코드 수정 후 `pytest tests/` 통과 확인 필수
+- Known Results 테이블 값과 비교하여 regression 체크
+
+### Before Finishing Any Task
+1. 테스트 통과 확인
+2. notes/ 관련 파일 업데이트
+3. CLAUDE.md의 Common Mistakes에 새로 발견한 이슈 추가
+4. git commit & push
